@@ -1,27 +1,19 @@
-# InfiniteChangeDetectionExV16
+This Repository is an example for explaining an issue in Siemens_IX dropdown in which there are multiple change detections  
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
+the issue is found in ix version 2.4/2.5 with Angular 16
 
-## Development server
+please follow the steps below to show the issue
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+1- open any browser and install Angular DevTools from (adds on in firefox and webs store for Chromium based browsers)
 
-## Code scaffolding
+2- clone this repo, then install and run the application
+"npm install && ng serve -o"
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+3- at this point a browser should be openned, open the browser devTools (F12 or ctrl + shift + I) and open the angular tab.
+4- open the profiler tab in the angular tab
+5- click on record button 
+6- goto a home page or report page.
+7- Click on a drop-down button then click outside to close.
+8- Scroll down till the drop-down button disappear from the viewport.
+ 
+You will find change detections invoked by the dropdown although the dropdown is closed, and it is expected that there should be no change detections invoked after the dropdown disappears.
