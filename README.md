@@ -1,5 +1,7 @@
 This Repository is an example for explaining an issue in Siemens_IX dropdown in which there are multiple change detections  
 
+the issue is found in ix version 2.4/2.5 with Angular 16
+
 please follow the steps below to show the issue
 
 1- open any browser and install Angular DevTools from (adds on in firefox and webs store for Chromium based browsers)
